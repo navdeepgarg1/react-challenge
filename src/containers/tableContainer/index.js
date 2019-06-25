@@ -13,7 +13,10 @@ class TableContainer extends React.Component {
     }
 
     handleChange = (data) => {
-        let requestData = data;
+        let requestData = {};
+        requestData.name = data.name;
+        requestData.email = data.email;
+        requestData.phone = data.phone;
         requestData.active = !data.active;
         this.props.updateStatus(requestData, data.id);
     }
